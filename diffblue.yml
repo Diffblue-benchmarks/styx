@@ -1,0 +1,213 @@
+# Tested on Deeptest release 1.10.0
+cbmcArguments:
+  cover-function-only: false
+  depth: false
+  do-not-test-methods-with-access: [ private ]
+  java-generate-no-comments: true
+  no-trivial-tests: true
+  string-non-empty: true
+  string-printable: true
+units:
+    - target:
+      - dir: styx-api-service/target/classes
+        file: com/spotify/styx/api/WorkflowResource.class
+        sourceDir: styx-api-service/src/main/java
+        sourceFile: com/spotify/styx/api/WorkflowResource.java
+    # Child of WorkflowResource.class
+      - dir: styx-api-service/target/classes
+        file: com/spotify/styx/api/workflow/WorkflowInitializationException.class
+        sourceDir: styx-api-service/src/main/java
+        sourceFile: com/spotify/styx/api/workflow/WorkflowInitializationException.java
+    # Child of WorkflowResource.class
+      - dir: styx-api-service/target/classes
+        file: com/spotify/styx/api/workflow/WorkflowInitializer.class
+        sourceDir: styx-api-service/src/main/java
+        sourceFile: com/spotify/styx/api/workflow/WorkflowInitializer.java
+    # Child of WorkflowResource.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/Schedule.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/model/Schedule.java
+    # Child of WorkflowResource.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/Workflow.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/model/Workflow.java
+    # Child of WorkflowResource.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/WorkflowConfiguration.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/model/WorkflowConfiguration.java
+    # Child of WorkflowResource.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/WorkflowId.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/model/WorkflowId.java
+    # Child of WorkflowResource.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/WorkflowInstance.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/model/WorkflowInstance.java
+    # Child of WorkflowResource.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/WorkflowState.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/model/WorkflowState.java
+    # Child of WorkflowResource.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/data/WorkflowInstanceExecutionData.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/model/data/WorkflowInstanceExecutionData.java
+    # Child of WorkflowResource.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/storage/Storage.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/storage/Storage.java
+    # Child of WorkflowResource.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/util/ParameterUtil.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/util/ParameterUtil.java
+    # Child of WorkflowResource.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/util/ResourceNotFoundException.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/util/ResourceNotFoundException.java
+    # Child of WorkflowResource.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/util/TimeUtil.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/util/TimeUtil.java
+    # Child of WorkflowResource.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/util/WorkflowValidator.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/util/WorkflowValidator.java
+    - target:
+      - dir: styx-api-service/target/classes
+        file: com/spotify/styx/api/workflow/WorkflowInitializer.class
+        sourceDir: styx-api-service/src/main/java
+        sourceFile: com/spotify/styx/api/workflow/WorkflowInitializer.java
+    # Child of WorkflowInitializer.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/storage/StorageTransaction.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/storage/StorageTransaction.java
+    # Child of WorkflowInitializer.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/util/Time.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/util/Time.java
+    # Child of WorkflowInitializer.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/util/TriggerInstantSpec.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/util/TriggerInstantSpec.java
+    - target:
+      - dir: styx-cli/target/classes
+        file: com/spotify/styx/cli/PrettyCliOutput.class
+        sourceDir: styx-cli/src/main/java
+        sourceFile: com/spotify/styx/cli/PrettyCliOutput.java
+    # Child of PrettyCliOutput.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/api/BackfillPayload.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/api/BackfillPayload.java
+    # Child of PrettyCliOutput.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/api/RunStateDataPayload.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/api/RunStateDataPayload.java
+    # Child of PrettyCliOutput.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/Backfill.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/model/Backfill.java
+    # Child of PrettyCliOutput.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/Resource.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/model/Resource.java
+    # Child of PrettyCliOutput.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/data/EventInfo.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/model/data/EventInfo.java
+    # Child of PrettyCliOutput.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/state/Message.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/state/Message.java
+    # Child of PrettyCliOutput.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/state/StateData.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/state/StateData.java
+    - target:
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/storage/DatastoreStorage.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/storage/DatastoreStorage.java
+    # Child of DatastoreStorage.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/BackfillBuilder.class
+        sourceDir: styx-common/target/generated-sources/annotations
+        sourceFile: com/spotify/styx/model/BackfillBuilder.java
+    # Child of DatastoreStorage.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/ExecutionDescription.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/model/ExecutionDescription.java
+    # Child of DatastoreStorage.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/StyxConfig.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/model/StyxConfig.java
+    # Child of DatastoreStorage.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/model/TriggerParameters.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/model/TriggerParameters.java
+    # Child of DatastoreStorage.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/state/RunState.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/state/RunState.java
+    # Child of DatastoreStorage.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/util/FnWithException.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/util/FnWithException.java
+    # Child of DatastoreStorage.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/util/MDCUtil.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/util/MDCUtil.java
+    # Child of DatastoreStorage.class
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/util/TriggerUtil.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/util/TriggerUtil.java
+    - target:
+      - dir: styx-common/target/classes
+        file: com/spotify/styx/util/TimeUtil.class
+        sourceDir: styx-common/src/main/java
+        sourceFile: com/spotify/styx/util/TimeUtil.java
+phases:
+-
+  timeout: 300
+  cbmcArguments:
+    java-assume-inputs-non-null: true
+    max-nondet-array-length: 10
+    unwind: 1
+-
+  timeout: 300
+  cbmcArguments:
+    max-nondet-array-length: 20
+    unwind: 2
+-
+  timeout: 300
+  cbmcArguments:
+    max-nondet-array-length: 30
+    max-nondet-string-length: 10
+    unwind: 3
